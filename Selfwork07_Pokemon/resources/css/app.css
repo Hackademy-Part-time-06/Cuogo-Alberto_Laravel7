@@ -1,2 +1,4 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
+
+@import "./node_modules/nes.css/css/nes.css"
