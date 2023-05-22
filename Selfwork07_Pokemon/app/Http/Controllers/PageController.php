@@ -12,4 +12,11 @@ class PageController extends Controller
 
         return view('pokemon.index', ['pokemons' => $pokemons]);
     }
+
+    public function show($id) {
+        $id_last = basename(parse_url($id, PHP_URL_PATH));
+        $pokemon = Http::get('https://pokeapi.co/api/v2/pokemon/' . $id_last)->json();
+
+        return view('pokemon.show', ['pokemon' => $pokemon]);
+    }
 }

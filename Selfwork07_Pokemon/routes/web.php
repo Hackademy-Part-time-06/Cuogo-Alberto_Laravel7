@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index'])->name('pokemon.index');
+Route::get('/pokemons/{id}', [PageController::class, 'show'])->name('pokemon.show');
